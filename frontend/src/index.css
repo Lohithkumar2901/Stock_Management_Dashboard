@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Custom scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #c7d2fe; border-radius: 3px; }
+
+/* ── Chart hover glow ── */
+.bar-glow:hover rect { filter: drop-shadow(0 0 8px rgba(99,102,241,.45)); }
+
+/* ── Modal animations ── */
+@keyframes fadeScale {
+  from { opacity: 0; transform: scale(.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.animate-fade-scale { animation: fadeScale .3s ease-out forwards; }
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-up { animation: slideUp .3s ease-out forwards; }
+
+/* ── Typing dots ── */
+@keyframes blink { 0%,80%,100% { opacity: 0; } 40% { opacity: 1; } }
+.typing-dot { animation: blink 1.4s infinite both; }
+.typing-dot:nth-child(2) { animation-delay: .2s; }
+.typing-dot:nth-child(3) { animation-delay: .4s; }
+
+/* ── Recharts tooltip overrides ── */
+.recharts-tooltip-wrapper { pointer-events: none; }

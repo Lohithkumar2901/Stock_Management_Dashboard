@@ -1,0 +1,30 @@
+# Secrets / environment
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# Runtime logs (contain user emails and chat history)
+backend/logs/
+*.log
+*.jsonl
+
+# Node / frontend build
+node_modules/
+frontend/dist/
+dist-ssr/
+*.local
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp

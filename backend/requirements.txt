@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-dotenv
+pandas
+sqlalchemy
+pymysql
+langchain-openai
+langchain-community
+python-jose[cryptography]
+httpx
